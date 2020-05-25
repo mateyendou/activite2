@@ -33,7 +33,7 @@ static final int MAX_CHAR = 15;
 *@param box  le carré.
 *dont le coin [haut, gauche] est [x,y].
 */
-public GrilleImpl(int x,  int y, int box) {
+public GrilleImpl(final int x,  final int y, final int box) {
 this.line = x;
 this.col = y;
 this.sq = box;
