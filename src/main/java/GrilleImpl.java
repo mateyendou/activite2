@@ -12,7 +12,7 @@ private final int sq;
 /**Déclaration du caractère 'vide'.*/
 static final char EMPTY = '@';
 /**Déclaration des valeurs possibble pour la grille.*/
-static final char[] possible = new char[] {'1', '2', '3', '4', '5', '6',
+static final char[] POSSIBLE = new char[] {'1', '2', '3', '4', '5', '6',
 '7', '8', '9', '0', 'a', 'b', 'c', 'd', 'e', 'f' };
 /**Déclaration d'une grille sudoku.*/
 private char[][] sudoku;
@@ -64,7 +64,7 @@ private boolean correspondance(final char valeur) {
 int i = 0;
 boolean trouver = false;
 while (i <= MAX_CHAR && !trouver) {
-if (valeur != possible[i]) {
+if (valeur != POSSIBLE[i]) {
 trouver = false;
 } else {
 trouver = true;
