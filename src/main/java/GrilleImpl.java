@@ -134,7 +134,8 @@ return this.sudoku.length;
 * @throws IllegalArgumentException si value n'est pas un caractere autorise
 *        ('1',...,'9')
 */
-public final void setValue(final int x, final int y, final char value) throws IllegalArgumentException {
+public final void setValue(final int x, final int y, final char value)
+throws IllegalArgumentException {
 if (!this.inrange(x)) {
 throw new IllegalArgumentException("x est hors bornes (0-8)");
 }
@@ -157,7 +158,8 @@ this.sudoku[x][y] = value;
 * @return valeur dans la case x,y
 * @throws IllegalArgumentException si x ou y sont hors bornes (0-8)
 */
-public final char getValue(final int x, final int y) throws IllegalArgumentException {
+public final char getValue(final int x, final int y)
+throws IllegalArgumentException {
 if (!this.inrange(x)) {
 throw new IllegalArgumentException("x est hors bornes (0-8)");
 }
@@ -279,4 +281,3 @@ System.out.println("Grille incomplete.");
 }
 }
 }
-
