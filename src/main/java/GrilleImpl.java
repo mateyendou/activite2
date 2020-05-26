@@ -206,9 +206,9 @@ throw new IllegalArgumentException("y est hors bornes (0-8)");
 if (!this.correspondance(value)) {
 throw new IllegalArgumentException("(Valeur non autorise '1',...,'9')");
 }
-if ((carrePossible(x, y, value))
-&& (lignePossible(x, value))
-&& (colonnePossible(y, value))) {
+if (carrePossible(x, y, value)
+&& lignePossible(x, value)
+&& colonnePossible(y, value)) {
 possibl = true;
 } else {
 possibl = false;
@@ -239,7 +239,7 @@ Scanner input = new Scanner(System.in);
 System.out.print("Nombre de cases de la grille [9 ou 16]: ");
 dimension = input.nextInt();
 }
-while ((dimension != SUDOKU_9) && (dimension != SUDOKU_16));
+while (dimension != SUDOKU_9 && dimension != SUDOKU_16);
 if (dimension == SUDOKU_9) {
 box = CARRE_3;
 } else {
@@ -257,7 +257,7 @@ Scanner scanner = new Scanner(System.in);
 System.out.println("Ligne ["
 + indiceligne + "] Colonne [" + indicecolonne + "] : ");
 String str = scanner.nextLine();
-if ((str == null) || (str.trim().isEmpty())) {
+if (str == null || str.trim().isEmpty()) {
 val = EMPTY;
 } else {
 val = str.charAt(0);
